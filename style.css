@@ -136,10 +136,11 @@ input {
 }
 
 /* Tablet */
+
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
     width: 90%;
-    background-color: #78c1f3;
+    overflow: hidden;
   }
 
   .todo {
@@ -154,9 +155,22 @@ input {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: small;
   }
 
   .lists .tasks {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    min-height: fit-content;
     align-items: center;
+  }
+
+  .tasks button {
+    margin-left: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    min-width: fit-content;
   }
 }

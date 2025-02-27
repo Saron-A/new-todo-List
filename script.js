@@ -53,6 +53,7 @@ function readTasks(div) {
 function taskCreation(div) {
   let task = document.createElement("p");
   task.textContent = input.value;
+  task.setAttribute("style", "cursor: pointer; opacity: 0.5;");
 
   task.addEventListener("dblclick", () => {
     task.contentEditable = false;
