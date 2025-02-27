@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #78c1f3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 60%;
+  height: 80vh;
+  margin: 20px auto;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 10px;
+  /* border: 1px solid black; */
+  position: sticky;
+  top: 0;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lists .tasks {
+  display: flex;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  padding: 15px;
+  width: 50vw;
+  gap: 10px;
+  height: 10vh;
+  border-bottom: 2px solid rgb(195, 192, 192);
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 5px;
+  border: none;
+  border-radius: 20px;
+  width: 4em;
+  cursor: pointer;
+  font-size: small;
+}
+
+#add {
+  border-radius: 50%;
+  width: 2em;
+  background-color: rgb(109, 234, 109);
+  font-size: medium;
+}
+
+input {
+  height: 3em;
+  width: 20em;
+  border-radius: 30px;
+  border: 2px solid rgb(195, 192, 192);
+  padding: 10px;
+  background-color: rgba(230, 236, 241, 0.886);
+}
+
+/* Responsive design */
+/* laptop screen */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+  .lists .tasks {
+    width: 80vw;
+  }
+  input {
+    width: 15em;
+  }
+}
+
+/* Tablet screen */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .lists .tasks {
+    width: 90vw;
+  }
+  input {
+    width: 10em;
+  }
+}
+
+/* phone screen */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  .lists .tasks {
+    width: 95vw;
+  }
+  input {
+    width: 8em;
+  }
+}
