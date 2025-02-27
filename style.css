@@ -16,7 +16,7 @@ body {
   padding: 10px;
   border: 2px solid white;
   border-radius: 20px;
-  width: 60%;
+  width: 70%;
   height: 80vh;
   margin: 20px auto;
   overflow-y: scroll;
@@ -86,51 +86,77 @@ input {
 }
 
 /* Responsive design */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+/* phone */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    height: 90vh;
+    font-size: small;
+  }
+
+  .todo {
+    width: 100%;
+    margin: 5px;
+    gap: 2px;
+  }
+
+  .todo input {
+    width: 80%;
+  }
+
+  #addButton {
+    padding: 2px;
+    border: none;
+    border-radius: 20px;
+    width: 2em;
+  }
+
+  .lists {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .lists .tasks {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    min-height: fit-content;
+    align-items: center;
+  }
+
+  .tasks button {
+    padding: 3px;
+    border: none;
+    border-radius: 20px;
+    min-width: fit-content;
+  }
 }
 
-.lists {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 600px; /* Adjust for tablet/laptop */
-  width: 100%;
-}
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+    background-color: #78c1f3;
+  }
 
-.tasks {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #f9f9f9;
-}
+  .todo {
+    width: 100%;
+    margin: 5px;
+    gap: 2px;
+  }
 
-input {
-  width: 100%; /* Full width on small screens */
-  padding: 10px;
-  font-size: 1rem;
-}
+  .lists {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-button {
-  padding: 8px 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  background: #007bff;
-  color: white;
-  border-radius: 5px;
-}
-
-button:hover {
-  background: #0056b3;
+  .lists .tasks {
+    align-items: center;
+  }
 }
