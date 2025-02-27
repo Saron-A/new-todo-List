@@ -26,9 +26,13 @@ function displayTasks() {
 
     task.addEventListener("dblclick", () => {
       task.contentEditable = false;
+      element.status = !element.status; // toggles status n true and false on local storage when double clicked
+      localStorage.setItem("todo", JSON.stringify(todo));
       task.setAttribute(
         "style",
-        "text-decoration: line-through; font-style: italic; cursor: pointer; opacity: 0.5;"
+        element.status
+          ? "text-decoration: line-through; font-style: italic; cursor: pointer; opacity: 0.5;"
+          : "text-decoration: none; font-style: normal; cursor: pointer; opacity: 1;"
       );
     });
 
