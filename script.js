@@ -37,7 +37,7 @@ function displayTasks() {
     });
 
     let edit = document.createElement("button");
-    edit.textContent = "Edit";
+    edit.innerHTML = '<i class="fas fa-edit"></i>';
     edit.setAttribute("style", "margin-left: auto;");
     edit.addEventListener("click", () => {
       task.contentEditable = true;
@@ -60,7 +60,7 @@ function displayTasks() {
     });
 
     let del = document.createElement("button");
-    del.textContent = "DEL";
+    del.innerHTML = '<i class="fas fa-trash"></i>';
     del.addEventListener("click", () => {
       const index = todo.indexOf(element);
       div.remove();
